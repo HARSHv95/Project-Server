@@ -14,8 +14,9 @@ app.use(express.json());
 
 const io = new Server(server, {
     cors: {
-        origin: "https://project-app2-hb7d.vercel.app/",
+        origin: "https://project-app2-hb7d.vercel.app",
         methods: ["GET", "POST"],
+        credentials : true,
     }
 });
 
