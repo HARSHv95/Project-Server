@@ -5,7 +5,11 @@ const cors = require("cors");
 const http = require("http");
 const server = http.createServer(app);
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://project-app2-hb7d.vercel.app', // NO trailing slash
+  credentials: true
+}));
+
 app.use(express.json());
 
 const io = new Server(server, {
